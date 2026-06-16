@@ -1,0 +1,5 @@
+"Forking child..." PRINTLN
+"child" FORK
+WAITUNTILDONE
+"Child finished, bye!" PRINTLN
+STOP

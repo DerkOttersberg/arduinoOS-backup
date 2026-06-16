@@ -1,0 +1,3 @@
+LOOP
+    'y' PRINTLN
+ENDLOOP
