@@ -17,7 +17,7 @@ struct procesEntry
     byte stack[STACKSIZE];
     int sp;
 };
-extern procesEntry procesTable[MAX_PROCES];
+extern procesEntry procesTable[MAX_PROCES]; //process id en welk nummer het heeft
 void run(const char *arg);
 void suspend(const char *arg);
 void resume(const char *arg);

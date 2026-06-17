@@ -54,7 +54,7 @@ void run(const char *arg)
     procesTable[noOfProces].beginningAdres = file.position;
     procesTable[noOfProces].loopAdres = file.position;
 
-    // Initialize stack to zero for safety
+
     memset(procesTable[noOfProces].stack, 0, STACKSIZE);
     procesTable[noOfProces].sp = 0;
     noOfProces++;
@@ -173,7 +173,7 @@ void list(const char *arg)
         Serial.println((char)procesTable[i].state);
     }
 }
-// helpers functions
+
 void changeState(int ID, byte desiredState)
 {
     if (procesTable[ID].state == desiredState)
@@ -213,10 +213,9 @@ void removeProcesFromList(int procesIndex)
 
     for (int i = procesIndex; i < noOfProces - 1; i++)
     {
-        // move everything back  by 1from the point of hte deleted proces
         procesTable[i] = procesTable[i + 1];
     }
-    procesTable[noOfProces - 1] = procesEntry(); // Reset the last entry
+    procesTable[noOfProces - 1] = procesEntry(); 
     noOfProces--;
 }
 void handleDataTypes(char type, int procesIndex)
@@ -274,13 +273,9 @@ void handleDataTypes(char type, int procesIndex)
     procesTable[procesIndex].programCounter += i;
 }
 
-//
-// running processes and executing instructions
-//
+// wordt elke main loop iteratie een keer aangroepen indirect zodat het 1 instructie per cyclus doet
 void runProcesses()
 {
-    // Serial.println((char)procesTable[0].state);
-    // Serial.println(noOfProces);
     for (int i = 0; i < noOfProces; i++)
     {
 
@@ -313,11 +308,13 @@ void execute(int i)
         float floatB;
 
         char popType;
-        // Serial.println(procesCounter);
-        // Serial.println(beginAdres);
-        // Serial.println(instruction);
+        
 
-        // execute 1 byte code per count
+
+
+
+
+        //hele groote switch case die afhandeld hoe de programmas worden uitgevoerd
         switch (instruction)
         {
         case CHAR:

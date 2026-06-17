@@ -38,11 +38,7 @@ void pushInt(int data, int procesID)
     // value
     pushByte(MSB, procesID);
     pushByte(LSB, procesID);
-
-    //  meta data
-    // pushByte(2);
     pushByte('I', procesID);
-    // showStack(procesID);
 }
 
 void pushFloat(float data, int procesID)
@@ -62,12 +58,7 @@ void pushFloat(float data, int procesID)
 
 void pushChar(char data, int procesID)
 {
-    // value
-
     pushByte(data, procesID);
-
-    //  meta data
-    // pushByte(1);
     pushByte('C', procesID);
 }
 
@@ -88,7 +79,7 @@ void pushString(char *data, int procesID)
     pushByte('S', procesID);
 }
 
-// pop values from stack
+
 
 int popInt(int procesID)
 {
