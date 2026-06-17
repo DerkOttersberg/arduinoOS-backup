@@ -18,6 +18,8 @@ commandType commands[] = {
     {"clearEEPROM", clearEEPROM},
     {"showByte", showProcesByteCode},
 };
+
+// Loopt door de array van alle 13 commands, en wanneer het overeenkomt roept hij de bijbehorende functie aan
 const int nCommands = sizeof(commands) / sizeof(commandType);
 void commandHandler(const char **userInput)
 {
@@ -44,6 +46,8 @@ void commandHandler(const char **userInput)
 //
 // @param
 // char[12} name, byte size, data
+
+//schrijft de files naar eeprom maar checkt eerst op groote, limiet van files
 void store(const char *arg)
 {
     if (arg == NULL)
@@ -322,6 +326,8 @@ void files(const char *arg)
         Serial.println(" ");
     }
 }
+
+//berekent eeprom lengtes - laatste iend positie van die file
 void freespace(const char *arg)
 {
     int maxEnd = 161;

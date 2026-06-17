@@ -3,7 +3,7 @@
 #include <string.h>
 static byte inputIndex = 0;
 
-// Functie om een token (woord) in te lezen
+// Functie om een token (woord) in te lezen the writen naar het geheugen voor processing
 bool readToken(char *buffer)
 {
     while (Serial.available())

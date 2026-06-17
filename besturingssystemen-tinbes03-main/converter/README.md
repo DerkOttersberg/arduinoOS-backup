@@ -1,5 +1,5 @@
 ArduinOS Bytecode Upload Tool
-=============================
+
 
 Upload bytecode programs to Arduino running ArduinOS.
 

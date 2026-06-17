@@ -6,6 +6,7 @@
 // EEPROM address to store file count
 static EERef noOfFiles = EEPROM[0];
 
+// handeling voor all files, 
 typedef struct
 {
     char name[12];

@@ -20,6 +20,8 @@ void resetProcesses()
     procesID = 0;
 }
 
+
+// zoekt in de fat naar de file, interact met processentry en geeft feedback of het bestand goed runt of dat er iets mis gaat
 void run(const char *arg)
 {
     if (arg == NULL)
@@ -64,6 +66,8 @@ void run(const char *arg)
     Serial.println(assignedProcessID);
 }
 
+
+// zoekt de file die gebpauseerd moet worden met error handeling, en slaat als succesufoll die instructies over
 void suspend(const char *arg)
 {
     if (arg == NULL)
@@ -149,6 +153,9 @@ void kill(const char *arg)
 
     Serial.println(F("Process terminated"));
 }
+
+
+//toont de ID van elke process als feedback naar user
 void list(const char *arg)
 {
     Serial.println(noOfProces);
