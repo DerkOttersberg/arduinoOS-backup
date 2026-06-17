@@ -10,7 +10,7 @@ void files(const char *arg);
 void freespace(const char *arg);
 void showEEPROM(const char *arg);
 void clearEEPROM(const char *arg);
-void showProcesByteCode(const char *arg);
+void showProcessByteCode(const char *arg);
 void unknownCommand(const char *arg);
 void commandHandler(const char **userInput);
 
@@ -23,6 +23,6 @@ typedef struct
     CommandFunc func;
 } commandType;
 
-// Lijst met beschikbare commando's
+// List of available commands
 
 #endif

@@ -49,7 +49,7 @@
 
 ---
 
-## Structuur van je presentatie (15-20 min)
+## Structuur 
 
 | Tijd | Actie |
 |------|-------|
@@ -61,7 +61,7 @@
 
 ---
 
-## Wil je meer punten?
+## extras
 
 Voeg deze items toe:
 
